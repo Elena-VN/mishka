@@ -1,0 +1,13 @@
+.DS_Store
+.idea
+.vscode
+*.ai
+*.log
+*.pdf
+*.psd
+*.css
+node_modules
+Thumbs.db
+.bowerrc
+app
+*.txt
