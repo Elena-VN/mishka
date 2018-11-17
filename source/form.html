@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <title>Вязание на заказ MISHKA - Милые штуки ручной работы для дома</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo">
+        <img src="" alt="MISHKA - Милые штуки ручной работы для дома" class="logo logo--header">
+      </a>
+      <nav class="header-nav">
+        <button type="button" class="header-nav__toggle toggle toggle--on">Открыть меню</button>
+        <div class="header-nav__wrapper">
+          <ul class="header-nav__list site-list">
+            <li class="site-list__item products">
+              <a href="" class="site-list__link site-list__link--catalog">Каталог товаров</a>
+              <ul class="products__list">
+                <li class="products__item">
+                  <a href="" class="products__link">Новые поступления</a>
+                </li>
+                <li class="products__item">
+                  <a href="" class="products__link">Распродажа</a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-list__item">
+              <a href="" class="site-list__link site-list__link--knitting">Вязание на заказ</a>
+            </li>
+            <li class="site-list__item">
+              <a href="" class="site-list__link site-list__link--search">Поиск по сайту</a>
+            </li>
+            <li class="site-list__item">
+              <a href="" class="site-list__link site-list__link--cart">Корзина:
+                <span class="cart--fullness">пока пуста</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <p class="header__delivery">Бесплатная доставка по России</p>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Вязание на заказ MISHKA - Милые штуки ручной работы для дома</h1>
+      <section class="promo">
+        <h2 class="promo__headline headline">Вязание на заказ</h2>
+      </section>
+      <section class="form-order">
+        <h2 class="visually-hidden">Форма заказа вязания</h2>
+        <p class="form-order__text">
+          Мы будем рады воплотить в жизнь ваши пожелания!
+          Заполните простую форму заказа и мы свяжемся с вами,
+          чтобы уточнить детали.
+        </p>
+        <form action="" class="form-order__list order-list">
+          <fieldset class="order-list__item order-list__item--type">
+            <legend class="order-list__headline">
+              Тип
+            </legend>
+            <p>
+              <input id="accessory" name="type" type="radio" class="order-list__radio" checked>
+              <label for="accessory" class="order-list__label">
+                Аксессуар для интерьера
+              </label>
+            </p>
+            <p>
+              <input id="toy" name="type" type="radio" class="order-list__radio">
+              <label for="toy" class="order-list__label">
+                Детская игрушка
+              </label>
+            </p>
+          </fieldset>
+          <fieldset class="order-list__item order-list__item--color">
+            <legend class="order-list__headline">
+              ЦВЕТ
+            </legend>
+            <p>
+              <input type="checkbox" name="color" id="white" value="white" class="order-list__checkbox" checked>
+              <label for="white" class="order-list__label">Белый</label>
+            </p>
+            <p>
+              <input type="checkbox" name="color" id="tiffany" value="tiffany" class="order-list__checkbox">
+              <label for="tiffany" class="order-list__label">«Тиффани»</label>
+            </p>
+            <p>
+              <input type="checkbox" name="color" id="pink" value="pink" class="order-list__checkbox">
+              <label for="pink" class="order-list__label">Розовый</label>
+            </p>
+            <p>
+              <input type="checkbox" name="color" id="gray" value="gray" class="order-list__checkbox" checked>
+              <label for="gray" class="order-list__label">Серый</label>
+            </p>
+            <p>
+              <input type="checkbox" name="color" id="black" value="black" class="order-list__checkbox">
+              <label for="black" class="order-list__label">Черный</label>
+            </p>
+            <p>
+              <input type="checkbox" name="color" id="orange" value="orange" class="order-list__checkbox">
+              <label for="orange" class="order-list__label">Оранжевый</label>
+            </p>
+          </fieldset>
+          <fieldset class="order-list__item order-list__item--full-name">
+            <legend class="order-list__name">
+              ФИО
+            </legend>
+            <p>
+              <label for="order-list--name" class="order-list__label">Имя:</label>
+              <input type="text" id="order-list--name" class="order-list__full-name" placeholder="Введите ваше имя*">
+            </p>
+            <p>
+              <label for="order-list--surname" class="order-list__label">Фамилия:</label>
+              <input type="text" id="order-list--surname" class="order-list__full-name" placeholder="Укажите фамилию*">
+            </p>
+            <p>
+              <label for="order-list--patronymic" class="order-list__label">Отчество:</label>
+              <input type="text" id="order-list--patronymic" class="order-list__full-name" placeholder="Отчество, если желаете">
+            </p>
+          </fieldset>
+          <fieldset class="order-list__item order-list__item--phone">
+            <legend class="order-list__name">ТЕЛ</legend>
+            <input type="tel" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
+          </fieldset>
+          <fieldset class="order-list__item  order-list__item--email">
+            <legend class="order-list__name">E-mail</legend>
+            <input type="email" name="email" placeholder="Ваш Email*">
+          </fieldset>
+          <fieldset class="order-list__item order-list__item--add">
+            <legend class="order-list__name">ДОП</legend>
+            <textarea class="order-list__text-add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a href="" class="footer__logo">
+        <img src="" alt="MISHKA - Милые штуки ручной работы для дома" class="logo logo--footer">
+      </a>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a href="" class="social__link social__link--instagram">
+            Мы в Инстаграме
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="" class="social__link social__link--facebook">
+            Мы в Фейсбуке
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="" class="social__link social__link--twitter">
+            Мы в Твиттере
+          </a>
+        </li>
+      </ul>
+      <a href="" class="footer__copyright copyright">
+        Разработано:
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
+    </footer>
+  </body>
+</html>
