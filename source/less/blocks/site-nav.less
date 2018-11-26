@@ -1,0 +1,44 @@
+.site-nav__wrapper {
+  position: absolute;
+  width: 100%;
+
+  &--on {
+    display: block;
+    z-index: 5000;
+  }
+
+  &--off {
+    display: none;
+    z-index: -9999;
+  }
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+
+  &__item {
+     padding: 28px 0 28px 45px;
+     border-top: 1px solid #ececec;
+   }
+
+  &__link {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+  }
+}
+
+//иконки на меню

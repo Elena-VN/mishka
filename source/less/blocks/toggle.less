@@ -1,0 +1,26 @@
+.toggle {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat;
+  border: none;
+  cursor: pointer;
+
+  &--on {
+    background-image: url(../img/icon-menu-close.svg);
+  }
+
+  &--off {
+    background-image: url(../img/icon-menu-open.svg);
+  }
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
