@@ -9,38 +9,40 @@
   <body>
     <header class="header container">
       <a class="header__logo">
-        <img src="" alt="MISHKA - Милые штуки ручной работы для дома" class="logo logo--header">
+        <img src="img/logo-mobile.svg" alt="MISHKA - Милые штуки ручной работы для дома" class="header__logo--img logo">
       </a>
       <nav class="header-nav">
-        <button type="button" class="header-nav__toggle toggle toggle--on">Открыть меню</button>
-        <div class="header-nav__wrapper">
-          <ul class="header-nav__list site-list">
-            <li class="site-list__item products">
-              <a href="" class="site-list__link site-list__link--catalog">Каталог товаров</a>
-              <ul class="products__list">
-                <li class="products__item">
-                  <a href="" class="products__link">Новые поступления</a>
+        <button type="button" class="header-nav__toggle toggle toggle--on">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="header-nav__wrapper site-nav__wrapper site-nav__wrapper--on">
+          <ul class="header-nav__list site-nav">
+            <li class="site-nav__item products-nav">
+              <a href="" class="site-nav__link site-nav__link--catalog">Каталог товаров</a>
+              <ul class="products-nav__list">
+                <li class="products-nav__item">
+                  <a href="" class="products-nav__link">Новые поступления</a>
                 </li>
-                <li class="products__item">
-                  <a href="" class="products__link">Распродажа</a>
+                <li class="products-nav__item">
+                  <a href="" class="products-nav__link">Распродажа</a>
                 </li>
               </ul>
             </li>
-            <li class="site-list__item">
-              <a href="" class="site-list__link site-list__link--knitting">Вязание на заказ</a>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link site-nav__link--knitting">Вязание на заказ</a>
             </li>
-            <li class="site-list__item">
-              <a href="" class="site-list__link site-list__link--search">Поиск по сайту</a>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link site-nav__link--search">Поиск по сайту</a>
             </li>
-            <li class="site-list__item">
-              <a href="" class="site-list__link site-list__link--cart">Корзина:
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link site-nav__link--cart cart">Корзина:
                 <span class="cart--fullness">пока пуста</span>
               </a>
             </li>
           </ul>
         </div>
+        <p class="header__delivery">Бесплатная доставка по России</p>
       </nav>
-      <p class="header__delivery">Бесплатная доставка по России</p>
     </header>
     <main>
       <h1 class="visually-hidden">MISHKA - магазин милых штук ручной работы для дома</h1>
