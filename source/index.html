@@ -12,10 +12,10 @@
         <img src="img/logo-mobile.svg" alt="MISHKA - Милые штуки ручной работы для дома" class="header__logo--img logo">
       </a>
       <nav class="header-nav">
-        <button type="button" class="header-nav__toggle toggle toggle--on">
+        <button type="button" class="header-nav__toggle toggle toggle--off">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="header-nav__wrapper site-nav__wrapper site-nav__wrapper--on">
+        <div class="header-nav__wrapper site-nav__wrapper site-nav__wrapper--off">
           <ul class="header-nav__list site-nav">
             <li class="site-nav__item products-nav">
               <a href="" class="site-nav__link site-nav__link--catalog">Каталог товаров</a>
@@ -46,8 +46,10 @@
     </header>
     <main>
       <h1 class="visually-hidden">MISHKA - магазин милых штук ручной работы для дома</h1>
-      <section class="promo container">
-        <h2 class="promo__headline headline">Милые штуки ручной работы для дома</h2>
+      <section class="promo">
+        <div class="container promo__headline--wrapper">
+          <h2 class="promo__headline headline">Милые штуки ручной работы для дома</h2>
+        </div>
         <ul class="promo__list">
           <li class="promo__item">
             <a href="" class="promo__link promo__link--interior">Предметы интерьера</a>
@@ -80,7 +82,7 @@
             </tr>
           </table>
         </div>
-        <img src="" alt="Вязаные корзинки" class="hit-week__img">
+        <img src="img/triple-set-mobile.jpg" alt="Вязаные корзинки" class="hit-week__img">
         <p class="hit-week__price">Цена: 990 руб.</p>
         <a href="" class="hit-week__order button">Заказать</a>
       </section>
@@ -109,8 +111,8 @@
       </section>
       <section class="reviews container">
         <h2 class="reviews__headline headline">Отзывы</h2>
-        <div class="reviews__list slider">
-          <blockquote class="reviews__item slider__item">
+        <div class="reviews__list reviews__slider">
+          <blockquote class="reviews__item reviews__item--on">
             <p class="reviews__text">
               Я молодая мама, но всё равно фотографии не набирали и близко
               такого количества лайков, как у популярных инстамамочек.
@@ -122,7 +124,7 @@
               <a href="" class="reviews__author--link">@misssssiskras</a>
             </cite>
           </blockquote>
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item reviews__item--off">
             <p class="reviews__text">
               Я молодая мама, но всё равно фотографии не набирали и близко
               такого количества лайков, как у популярных инстамамочек.
@@ -134,7 +136,7 @@
               <a href="" class="reviews__author--link">@misssssiskras</a>
             </cite>
           </blockquote>
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item reviews__item--off">
             <p class="reviews__text">
               Я молодая мама, но всё равно фотографии не набирали и близко
               такого количества лайков, как у популярных инстамамочек.
@@ -146,8 +148,14 @@
               <a href="" class="reviews__author--link">@misssssiskras</a>
             </cite>
           </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <div class="reviews__buttons--wrapper">
+            <button class="reviews__buttons reviews__buttons--prev" type="button">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
+            <button class="reviews__buttons reviews__buttons--next" type="button">
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
+          </div>
         </div>
         <a href="" class="reviews__write-us button">Написать</a>
       </section>
@@ -169,34 +177,42 @@
             </td>
           </tr>
         </table>
-        <img src="" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" class="contacts__map">
+        <img
+          src="img/map-mobile.jpg"
+          alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"
+          class="contacts__map"
+          width="320"
+          height="460"
+        >
         <a href="" class="contacts__write-us button">Напишите нам</a>
       </section>
     </main>
-    <footer class="container">
+    <footer class="footer container">
       <a href="" class="footer__logo">
         <img src="" alt="MISHKA - Милые штуки ручной работы для дома" class="logo logo--footer">
       </a>
       <ul class="footer__social social">
         <li class="social__item">
           <a href="" class="social__link social__link--instagram">
-            Мы в Инстаграме
+            <span class="visually-hidden">Мы в Инстаграме</span>
           </a>
         </li>
         <li class="social__item">
           <a href="" class="social__link social__link--facebook">
-            Мы в Фейсбуке
+            <span class="visually-hidden">Мы в Фейсбуке</span>
           </a>
         </li>
         <li class="social__item">
           <a href="" class="social__link social__link--twitter">
-            Мы в Твиттере
+            <span class="visually-hidden">Мы в Твиттере</span>
           </a>
         </li>
       </ul>
       <a href="" class="footer__copyright copyright">
-        Разработано:
-        <span class="visually-hidden">HTML Academy</span>
+        Разработано
+        <object class="copyright__logo" type="image/svg+xml" data="img/logo-htmlacademy.svg" width="27" height="34" >
+          HTML Academy
+        </object>
       </a>
     </footer>
   </body>
