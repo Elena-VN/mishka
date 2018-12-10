@@ -11,3 +11,4 @@ Thumbs.db
 .bowerrc
 app
 *.txt
+build
