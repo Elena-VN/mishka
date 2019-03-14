@@ -1,0 +1,165 @@
+.catalog__list {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__item {
+  width: 260px;
+  margin-bottom: 30px;
+  border: 1px solid #ececec;
+
+  &:hover {
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .2);
+
+    .catalog__name {
+      opacity: .6;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 6px 14px -2px rgba(0,0,0,0.2);
+
+    .catalog__name {
+      opacity: .3;
+    }
+  }
+}
+
+.catalog__link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.catalog__img {
+  width: 260px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.catalog__name {
+  padding-left: 30px;
+  font-size: 17px;
+  color: #000;
+}
+
+.catalog__options {
+  padding: 0 0 20px 30px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #444;
+}
+
+.catalog__info {
+  display: flex;
+  justify-content: space-between;
+  width: 205px;
+  margin: 0 auto;
+  padding: 25px 0;
+  font-size: 15px;
+  font-weight: 700;
+  border-top: 1px solid #ececec;
+}
+
+.catalog__price {
+  color: #000;
+}
+
+.catalog__buy {
+  width: 20px;
+  height: 20px;
+  color: #000;
+  text-decoration: none;
+  background-image: url(../../img/icon-cart.svg);
+  opacity: .2;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .catalog__list {
+    width: 670px;
+    margin: 0;
+  }
+
+  .catalog__item {
+    width: 670px;
+    margin-bottom: 55px;
+  }
+
+  .catalog__link {
+    display: flex;
+  }
+
+  .catalog__img {
+    width: 335px;
+    height: 335px;
+    margin-bottom: 0;
+  }
+
+  .catalog__link--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .catalog__name {
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  .catalog__options {
+    flex-grow: 1;
+    font-size: 15px;
+  }
+
+  .catalog__info {
+    width: 270px;
+    margin-left: 30px;
+    font-size: 17px;
+  }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .catalog__item {
+    width: 316px;
+    margin-bottom: 55px;
+  }
+
+  .catalog__link {
+    display: block;
+  }
+
+  .catalog__img {
+    width: 316px;
+    height: 462px;
+  }
+
+  .catalog__link--wrapper {
+    display: block;
+  }
+}

@@ -3,6 +3,8 @@
  */
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
+const minCSS = require('webpack-css-min');
 
 module.exports = {
   context: `${__dirname}/source`,
@@ -10,6 +12,7 @@ module.exports = {
   entry: {
     index: './js/index.js',
     catalog: './js/catalog.js',
+    form: './js/form.js',
   },
 
   output: {
@@ -32,9 +35,22 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true,
+              modules: false,
             },
           },
+//************modification autoprefixer************
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers:['ie >= 8', 'last 4 version']
+                })
+              ],
+              sourceMap: true
+            }
+          },
+//***********************************
           {
             loader: 'less-loader',
           },
@@ -69,6 +85,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
+
+    minCSS, // modification CSS-min
   ],
 
   devServer: {

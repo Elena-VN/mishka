@@ -1,0 +1,29 @@
+.info {
+  margin-bottom: 30px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #444;
+}
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .info {
+    margin-bottom: 55px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
+  .info {
+    margin-bottom: 55px;
+
+    &__text {
+      padding: 0 175px;
+    }
+  }
+}

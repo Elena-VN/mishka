@@ -38,7 +38,7 @@
     z-index: 40;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
   }
 }
 
@@ -52,6 +52,8 @@
 }
 
 .order-modal__button {
+  cursor: pointer;
+
   &-size {
     width: 82px;
     height: 52px;
@@ -63,7 +65,8 @@
       border-color: #c7c7c7;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       border-color: @light-green;
     }
   }
@@ -73,6 +76,7 @@
   color: #fff;
   background-color: @light-green;
   border-color: @light-green;
+  cursor: pointer;
 
   &:hover {
     background-color: @dark-green;
@@ -80,4 +84,50 @@
   }
 }
 
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .order-modal {
+    &__wrapper {
+      width: 566px;
+      height: 336px;
+      margin: -168px 0 0  -278px;
+      padding: 0;
+      box-shadow: 0 0 35px 0 rgba(0,0,0,0.2);
+      border: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    &__headline {
+      margin-bottom: 20px;
+      padding-top: 40px;
+      font-size: 30px;
+    }
+
+    &__choice {
+      font-size: 17px;
+    }
+  }
+
+  .order-modal__buttons {
+    justify-content: space-around;
+    width: 351px;
+    margin: 0 auto 32px auto;
+  }
+
+  .order-modal__button {
+    &-size {
+      width: 108px;
+    }
+  }
+
+  .order-modal__add-button {
+    width: 340px;
+    margin: 0 auto;
+  }
+}
+
+//ПК версия
+
+//@media (min-width: @desktop-width) {
+//}
 

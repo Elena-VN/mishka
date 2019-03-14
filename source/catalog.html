@@ -2,98 +2,153 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/catalog.css">
     <title>Каталог магазина MISHKA - Милые штуки ручной работы для дома</title>
   </head>
   <body>
-    <header class="header container">
+  <header class="header container">
     <a href="index.html" class="header__logo">
-      <img src="img/logo-mobile.svg" alt="MISHKA - Милые штуки ручной работы для дома" class="header__logo--img logo">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA - Милые штуки ручной работы для дома">
+      </picture>
     </a>
-    <nav class="header-nav">
-      <button type="button" class="header-nav__toggle toggle toggle--off">
+    <nav class="header-nav header-nav--closed header-nav--nojs">
+      <button type="button" class="header-nav__toggle">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="header-nav__wrapper site-nav__wrapper site-nav__wrapper--off">
+      <div class="header-nav__wrapper">
         <ul class="header-nav__list site-nav">
-          <li class="site-nav__item products-nav">
-            <a href="" class="site-nav__link site-nav__link--catalog">Каталог товаров</a>
+          <li class="site-nav__item site-nav__item--catalog products-nav">
+            <a class="site-nav__link site-nav__link--catalog site-nav__item--active">Каталог товаров</a>
             <ul class="products-nav__list">
               <li class="products-nav__item">
-                <a href="" class="products-nav__link">Новые поступления</a>
+                <a href="catalog.html" class="products-nav__link">Новые поступления</a>
               </li>
               <li class="products-nav__item">
-                <a href="" class="products-nav__link">Распродажа</a>
+                <a href="catalog.html" class="products-nav__link">Распродажа</a>
               </li>
             </ul>
           </li>
-          <li class="site-nav__item">
+          <li class="site-nav__item site-nav__item--knitting">
             <a href="form.html" class="site-nav__link site-nav__link--knitting">Вязание на заказ</a>
           </li>
-          <li class="site-nav__item">
-            <a href="" class="site-nav__link site-nav__link--search">Поиск по сайту</a>
+        </ul>
+        <ul class="header-nav__list user-nav">
+          <li class="user-nav__item user-nav__item--search">
+            <a class="user-nav__link user-nav__link--search">
+              <svg class="user-nav__link--icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                   viewBox="-0.8 -0.8 17.6 17.6">
+                <path
+                  d="M16.47 14.93l-3.415-3.415c.965-1.289 1.545-2.881 1.545-4.616C14.6 2.646 11.153-.8 6.9-.8S-.8 2.646-.8 6.899s3.446 7.7 7.699 7.7c1.734 0 3.326-.58 4.613-1.546l3.417 3.416c.203.202.418.33.771.33.607 0 1.1-.492 1.1-1.1 0-.24-.061-.499-.33-.769zM1.399 6.899c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5-2.462 5.5-5.5 5.5-5.5-2.461-5.5-5.5z"/>
+              </svg>
+              <span class="user-nav__search--text">Поиск по сайту</span>
+            </a>
           </li>
-          <li class="site-nav__item">
-            <a href="" class="site-nav__link site-nav__link--cart cart">Корзина:
+          <li class="user-nav__item user-nav__item--cart">
+            <a class="user-nav__link user-nav__link--cart cart">
+              <svg class="user-nav__link--icon" xmlns="http://www.w3.org/2000/svg" width="21" height="18"
+                   viewBox="264.205 370.961 20.294 18.849">
+                <path
+                  d="M283.75 378.19h-3.151l-3.407-6.814c-.185-.37-.634-.52-1.006-.335-.371.186-.521.636-.335 1.006l3.071 6.143h-9.138l3.072-6.143c.185-.371.035-.821-.335-1.006-.37-.185-.821-.035-1.006.335l-3.407 6.814h-3.151c-.414 0-.75.336-.75.75s.336.75.75.75h.157l.855 2.991c-.187.137-.316.347-.316.595 0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795c.388-.028.698-.344.698-.739 0-.249-.129-.459-.316-.596l.854-2.991h.157c.414 0 .75-.336.75-.75s-.338-.749-.752-.749zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z"/>
+              </svg>
+              Корзина:
               <span class="cart--fullness">пока пуста</span>
             </a>
           </li>
         </ul>
       </div>
-      <p class="header__delivery">Бесплатная доставка по России</p>
     </nav>
+    <p class="header__delivery">Бесплатная доставка по России</p>
   </header>
-    <main>
+  <main>
       <h1 class="visually-hidden">Каталог магазина MISHKA - Милые штуки ручной работы для дома</h1>
       <section class="promo">
-        <h2 class="promo__headline headline">Каталог товаров</h2>
+        <div class="promo__wrapper container">
+          <h2 class="promo__headline headline">Каталог товаров</h2>
+        </div>
       </section>
-      <section class="catalog">
+      <section class="catalog container">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a href="" class="catalog__link">
-              <img src="" alt="Зайчик-попрыгайчик" class="catalog__img">
-              <p class="catalog__name">Зайчик-попрыгайчик</p>
-              <p class="catalog__options">Рост 30 см, вес 200 г</p>
-              <p class="catalog__info">
-                <span class="catalog__price">1 200 руб.</span>
-                <a href="" class="catalog__buy">Купить</a>
-              </p>
-            </a>
+            <div class="catalog__link">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" class="catalog__img">
+              </picture>
+              <div class="catalog__link--wrapper">
+                <p class="catalog__name">Зайчик-попрыгайчик</p>
+                <p class="catalog__options">Рост 30 см, вес 200 г</p>
+                <p class="catalog__info">
+                  <span class="catalog__price">1 200 руб.</span>
+                  <a href="#" class="catalog__buy"><span class="visually-hidden">Купить</span></a>
+                </p>
+              </div>
+            </div>
           </li>
           <li class="catalog__item">
-            <a href="" class="catalog__link">
-              <img src="" alt="Корзинка для белья" class="catalog__img">
-              <p class="catalog__name">Корзинка для белья</p>
-              <p class="catalog__options">Диаметр 15 см, высота 10 см</p>
-              <p class="catalog__info">
-                <span class="catalog__price">690 руб.</span>
-                <a href="" class="catalog__buy">Купить</a>
-              </p>
-            </a>
+            <div class="catalog__link">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья" class="catalog__img">
+              </picture>
+              <div class="catalog__link--wrapper">
+                <p class="catalog__name">Корзинка для белья</p>
+                <p class="catalog__options">Диаметр 15 см, высота 10 см</p>
+                <p class="catalog__info">
+                  <span class="catalog__price">690 руб.</span>
+                  <a href="" class="catalog__buy">
+                    <span class="visually-hidden">Купить</span>
+                  </a>
+                </p>
+              </div>
+            </div>
           </li>
           <li class="catalog__item">
-            <a href="" class="catalog__link">
-              <img src="" alt="Большая корзинка для игрушек" class="catalog__img">
-              <p class="catalog__name">Большая корзинка для игрушек</p>
-              <p class="catalog__options">Диаметр 30 см, высота 30 см</p>
-              <p class="catalog__info">
-                <span class="catalog__price">1 500 руб.</span>
-                <a href="" class="catalog__buy">Купить</a>
-              </p>
-            </a>
+            <div class="catalog__link">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Большая корзина для игрушек" class="catalog__img">
+              </picture>
+              <div class="catalog__link--wrapper">
+                <p class="catalog__name">Большая корзинка для игрушек</p>
+                <p class="catalog__options">Диаметр 30 см, высота 30 см</p>
+                <p class="catalog__info">
+                  <span class="catalog__price">1 500 руб.</span>
+                  <a href="" class="catalog__buy">
+                    <span class="visually-hidden">Купить</span>
+                  </a>
+                </p>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
-      <section class="production">
+      <section class="production container">
         <ul class="production__list">
           <li class="production__item production__item--video">
-            <img src="" alt="Процесс производства" class="production__video">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Процесс производства" class="production__video">
+            </picture>
+            <a class="production__video--play">
+              <span class="visually-hidden">PLAY</span>
+            </a>
+          </li>
+          <li class="production__item production__item--heading">
+            <h2 class="production__headline">Процесс производства</h2>
           </li>
           <li class="production__item production__item--info">
-            <h2 class="production__headline">Процесс производства</h2>
             <p class="production__text">
               По просьбам наших любимых фолловеров
               мы сняли для вас подробное видео о том, как
@@ -123,9 +178,10 @@
         <div class="order-modal__overlay"></div>
       </section>
     </main>
-    <footer class="footer container">
+  <footer class="footer">
+    <div class="footer__wrapper container">
       <a href="" class="footer__logo">
-        <img src="" alt="MISHKA - Милые штуки ручной работы для дома" class="logo logo--footer">
+        <img src="img/logo-footer.svg" alt="MISHKA - Милые штуки ручной работы для дома" class="logo logo--footer">
       </a>
       <ul class="footer__social social">
         <li class="social__item">
@@ -146,10 +202,12 @@
       </ul>
       <a href="" class="footer__copyright copyright">
         Разработано
-        <object class="copyright__logo" type="image/svg+xml" data="img/logo-htmlacademy.svg" width="27" height="34" >
+        <object class="copyright__logo" type="image/svg+xml" data="img/logo-htmlacademy.svg" width="27" height="34">
           HTML Academy
         </object>
       </a>
-    </footer>
+    </div>
+  </footer>
+  <script src="js/navigation-site.js"></script>
   </body>
 </html>

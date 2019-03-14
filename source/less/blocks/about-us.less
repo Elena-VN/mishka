@@ -1,8 +1,8 @@
 .about-us {
   margin-bottom: 20px;
   padding-top: 35px;
-  background: url(../../img/bg-zigzag-line.svg) no-repeat;
-  background-size: contain;
+  background: url(../../img/bg-zigzag-line.svg) repeat-x;
+  background-size: 770px 34px;
 
   &__headline {
     margin-bottom: 25px;
@@ -10,43 +10,90 @@
 }
 
 .about-us__list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
   width: 320px;
   margin: 0 auto;
   padding: 0;
+  list-style: none;
 }
 
 .about-us__item {
+  position: relative;
   padding-top: 55px;
   padding-right: 70px;
   padding-bottom: 35px;
-  background: left top no-repeat;
 
-  // временно
-  &--eco {
-    background-image: url(../../img/icon-feature-1.svg);
+  &--icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: @light-green;
   }
 
-  &--style {
-    background-image: url(../../img/icon-feature-2.svg);
+}
+
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    margin-bottom: 25px;
+    padding-top: 70px;
+
+    &__headline {
+      margin-bottom: 50px;
+    }
   }
 
-  &--like {
-    background-image: url(../../img/icon-feature-3.svg);
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: @container-tablet;
+    margin: 0 auto;
+    padding: 0;
   }
 
-  &--handmade {
-    background-image: url(../../img/icon-feature-4.svg);
+  .about-us__item {
+    width: 335px;
+    margin: 0;
+    padding: 60px 0 55px 0;
+    font-size: 20px;
+
+    &--eco {
+      order: 1;
+    }
+    &--style {
+      order: 3;
+    }
+    &--like {
+      order: 5;
+    }
+    &--handmade {
+      order: 2;
+    }
+    &--native {
+      order: 4;
+    }
+    &--giftwrap {
+      order: 6;
+    }
+  }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    margin-bottom: 30px;
+    padding-top: 90px;
+    background-size: 1050px 34px;
+
+    &__headline {
+      margin-left: 175px;
+    }
   }
 
-  &--native {
-    background-image: url(../../img/icon-feature-5.svg);
+  .about-us__list {
+    width: 700px;
   }
-
-  &--giftwrap {
-    background-image: url(../../img/icon-feature-6.svg);
-  }
-
 }

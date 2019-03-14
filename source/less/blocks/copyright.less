@@ -5,7 +5,9 @@
   cursor: pointer;
 
   &:hover {
-    opacity: .6;
+    .copyright__logo {
+      fill: @dark-green;
+    }
   }
 
   &:active {
@@ -17,8 +19,19 @@
   padding-left: 30px;
   vertical-align: middle;
   cursor: pointer;
-  //не работает, выясним почему позже
-  &:hover {
-    fill: @light-green;
+  fill: @light-green;
+}
+
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-top: 5px;
   }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
 }

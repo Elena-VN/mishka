@@ -1,6 +1,7 @@
 .hit-week {
   position: relative;
   margin-bottom: 35px;
+
   .headline {
     margin-bottom: 10px;
   }
@@ -62,4 +63,102 @@
   text-align: center;
   line-height: 24px;
   color: #444;
+}
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .hit-week {
+    margin-bottom: 45px;
+  }
+
+  .hit-week__headline--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  .hit-week__title {
+    width: 130px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hit-week__info {
+    width: 285px;
+    margin-top: -5px;
+    padding: 0;
+    font-size:  17px;
+    line-height: 30px;
+  }
+
+  .hit-week__table {
+    margin-bottom: 55px;
+  }
+
+  .hit-week__img {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    width: 333px;
+    height: 404px;
+  }
+
+  .hit-week__price {
+    margin-bottom: 35px;
+    padding-left: 75px;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .hit-week__order {
+    width: 286px;
+  }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
+  .hit-week {
+    margin-bottom: 70px;
+  }
+
+  .hit-week__headline {
+    order: 2;
+  }
+
+  .hit-week__headline--wrapper {
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    padding-top: 50px;
+  }
+
+  .hit-week__title {
+    order: 1;
+    padding: 0 23px;
+  }
+
+  .hit-week__wrapper {
+    margin-left: 175px;
+    background-image: none;
+  }
+
+  .hit-week__info {
+    margin-top: 0;
+  }
+
+  .hit-week__table {
+    margin-bottom: 115px;
+  }
+
+  .hit-week__img {
+    position: absolute;
+    top: -5px;
+    right: 50px;
+    z-index: -5;
+    width: 525px;
+    height: 636px;
+  }
 }

@@ -1,0 +1,49 @@
+.promo {
+  background-color: #f1f1f1;
+
+  &__wrapper {
+    margin-bottom: 35px;
+    padding: 75px 0 75px 0;
+    text-align: center;
+  }
+}
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .promo {
+    position: relative;
+    margin-bottom: 80px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: -8px;
+      width: 100%;
+      height: 22px;
+      background: url(../../img/bg-zigzag-fill.svg) repeat-x;
+      background-size: 768px 34px;
+    }
+
+    &__wrapper {
+      padding: 95px 0;
+    }
+  }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
+  .promo {
+    margin-bottom: 125px;
+
+    &::after {
+      background-size: 1050px 34px;
+    }
+
+    &__wrapper {
+      padding: 100px 0;
+    }
+  }
+}

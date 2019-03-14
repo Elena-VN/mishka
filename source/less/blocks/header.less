@@ -1,8 +1,90 @@
 .header {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
+
+  &__logo {
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    text-align: center;
+
+    img {
+      width: 86px;
+      height: 35px;
+    }
+
+    &[href]:hover {
+      opacity: .6;
+    }
+
+    &[href]:active {
+      opacity: .3;
+    }
+  }
 
   &__delivery {
     display: none;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: -55px;
+
+    &__logo {
+      padding-top: 22px;
+      text-align: left;
+
+      img {
+        width: 112px;
+        height: 46px;
+      }
+    }
+
+    &__delivery {
+      display: block;
+      position: absolute;
+      right: 50px;
+      bottom: 3px;
+      z-index: 5;
+    }
+  }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
+  .header {
+    margin-bottom: 0;
+
+    &__logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 5;
+      margin-top: -36px;
+      margin-left: -74px;
+      padding-top: 0;
+
+      img {
+        width: 150px;
+        height: 72px;
+      }
+    }
+
+    &__delivery {
+      right: 58px;
+      bottom: -55px;
+    }
   }
 }

@@ -1,8 +1,8 @@
 .contacts {
   margin-bottom: 40px;
   padding-top: 35px;
-  background: url(../../img/bg-zigzag-line.svg) no-repeat;
-  background-size: contain;
+  background: url(../../img/bg-zigzag-line.svg) repeat-x;
+  background-size: 770px 34px;
 
   &__headline {
     margin-bottom: 30px;
@@ -57,4 +57,110 @@
 
 .contacts__map {
   margin: 0 0 40px -30px;
+}
+
+//планшетная версия
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    margin-bottom: 55px;
+    padding-top: 80px;
+
+    &__wrapper {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        right: 55px;
+        width: 47px;
+        height: 81px;
+        background-image: url(../../img/icon-flag.svg);
+      }
+    }
+
+    &__headline {
+      margin-bottom: 45px;
+      font-size: 43px;
+    }
+  }
+
+  .contacts__table {
+    margin-bottom: 25px;
+    tbody {
+      display: flex;
+    }
+  }
+
+  .contacts__field {
+    width: 70px;
+    padding: 0 0 25px 0;
+    font-size: 17px;
+  }
+
+  .contacts__value {
+    width: 230px;
+    padding: 0 0 25px 0;
+    font-size: 17px;
+
+    &--email {
+      padding-right: 25px;
+    }
+  }
+
+  .contacts__map {
+    width: 765px;
+    height: 457px;
+    margin: 0 0 50px -50px;
+  }
+
+  .contacts__write-us {
+    width: 226px;
+    margin: 0 auto;
+  }
+}
+
+//ПК версия
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    margin-bottom: 105px;
+    background-size: 1050px 34px;
+
+    &__wrapper {
+
+      &::before {
+        top: 80px;
+        left: 120px;
+      }
+    }
+
+    &__headline {
+      margin-left: 175px;
+      padding-top: 90px;
+      font-size: 53px;
+    }
+  }
+
+  .contacts__table {
+    margin-left: 175px;
+    margin-bottom: 50px;
+
+    tbody {
+      display: block;
+    }
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    margin: 0;
+    width: 525px;
+    height: 457px;
+  }
+
+  .contacts__write-us {
+    margin-left: 175px;
+  }
 }

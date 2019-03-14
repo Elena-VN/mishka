@@ -1,3 +1,35 @@
 .products-nav__list {
   display: none;
 }
+
+@media (min-width: @desktop-width) {
+  .products-nav {
+    &__list {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: -40px;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__link {
+      padding-right: 61px;
+      font-size: 15px;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(0, 0, 0, .6);
+      }
+
+      &:active {
+        color: rgba(0, 0, 0, .3);
+      }
+    }
+  }
+
+}
