@@ -26,9 +26,11 @@
 
 @media (min-width: @tablet-width) {
   .site-nav {
+    position: absolute;
+    left: -320px;
+    bottom: -60px;
     order: 2;
     z-index: 30;
-    margin-left: -130px;
     font-size: 15px;
     background-color: transparent;
 
@@ -47,6 +49,7 @@
 
 @media (min-width: @desktop-width) {
   .site-nav {
+    position: static;
     display: flex;
     z-index: 1;
     width: 410px;
